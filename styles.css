@@ -301,6 +301,38 @@ li::marker {
 }
 
 @media print {
+  /* ATS parsing: CSS ::before content becomes real text in the PDF layer, so a
+     parser reads "// WORK EXPERIENCE" rather than "WORK EXPERIENCE" and can fail
+     to recognise the section. The screen version keeps the styling; the PDF that
+     gets uploaded does not. Verified with pypdf against output/. */
+  .eyebrow::before,
+  .location::before,
+  .contacts a::before,
+  .contacts a[aria-label*="LinkedIn"]::before,
+  .contacts a[aria-label*="GitHub"]::before,
+  h2::before,
+  .stack strong::before {
+    content: none;
+  }
+
+  /* The printed URLs are long; keep them off the name's line. */
+  .hero h1 {
+    white-space: nowrap;
+  }
+
+  .contacts {
+    font-size: 8.6pt;
+    word-break: break-all;
+  }
+
+  /* Anchor text alone gives a parser the word "LinkedIn", not the address.
+     Print the real URLs so the contact fields can be populated. */
+  .contacts a::after {
+    content: " " attr(href);
+    font-weight: 400;
+  }
+
+
   html {
     background: #ffffff;
     font-size: 10.6pt;
