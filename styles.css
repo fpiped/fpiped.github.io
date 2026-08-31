@@ -110,16 +110,8 @@ time {
   text-align: right;
 }
 
-.contacts a::before {
-  color: var(--muted);
-}
-
-.contacts a[aria-label*="LinkedIn"]::before {
-  content: "in: ";
-}
-
-.contacts a[aria-label*="GitHub"]::before {
-  content: "git: ";
+.pdf-contact {
+  display: none;
 }
 
 .section {
@@ -307,11 +299,9 @@ li::marker {
      gets uploaded does not. Verified with pypdf against output/. */
   .eyebrow::before,
   .location::before,
-  .contacts a::before,
-  .contacts a[aria-label*="LinkedIn"]::before,
-  .contacts a[aria-label*="GitHub"]::before,
   h2::before,
-  .stack strong::before {
+  .stack strong::before,
+  .stack strong::after {
     content: none;
   }
 
@@ -325,13 +315,9 @@ li::marker {
     word-break: break-all;
   }
 
-  /* Anchor text alone gives a parser the word "LinkedIn", not the address.
-     Print the real URLs so the contact fields can be populated. */
-  .contacts a::after {
-    content: " " attr(href);
-    font-weight: 400;
+  .pdf-contact {
+    display: block;
   }
-
 
   html {
     background: #ffffff;

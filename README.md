@@ -20,6 +20,14 @@ Then visit `http://localhost:8000`.
 
 ## Generate PDF
 
+Create the local, untracked contact file once:
+
+```bash
+cp .cv-contact.example.json .cv-contact.json
+```
+
+Replace the example value with the email to include in the PDF, then run:
+
 ```bash
 make pdf
 ```
@@ -42,5 +50,8 @@ branch. The empty `.nojekyll` file disables Jekyll processing.
 
 ## Privacy
 
-The public site intentionally contains no direct email address or phone number.
-Professional contact is available through the linked LinkedIn profile.
+The public site intentionally contains no direct email. The general location is
+public, and professional contact is available through the linked LinkedIn
+profile. The PDF builder injects the email from the Git-ignored
+`.cv-contact.json` into a temporary HTML file; the email never enters the tracked
+GitHub Pages source.
