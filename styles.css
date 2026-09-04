@@ -289,7 +289,7 @@ li::marker {
 
 @page {
   size: A4;
-  margin: 14mm;
+  margin: 11mm 14mm;
 }
 
 @media print {
@@ -321,8 +321,8 @@ li::marker {
 
   html {
     background: #ffffff;
-    font-size: 10.6pt;
-    line-height: 1.5;
+    font-size: 9.8pt;
+    line-height: 1.42;
   }
 
   body {
@@ -339,17 +339,21 @@ li::marker {
   }
 
   .hero {
-    padding-bottom: 14px;
+    padding-bottom: 11px;
   }
 
   .section {
-    margin-top: 38px;
+    margin-top: 26px;
   }
 
   .role {
     break-inside: auto;
-    margin-top: 15px;
-    padding-bottom: 14px;
+    margin-top: 11px;
+    padding-bottom: 9px;
+  }
+
+  .print-page-start {
+    break-before: page;
   }
 
   .role-header {
@@ -363,7 +367,7 @@ li::marker {
   }
 
   h1 {
-    font-size: 28pt;
+    font-size: 27pt;
   }
 
   h2 {
@@ -376,11 +380,11 @@ li::marker {
   }
 
   li {
-    margin-bottom: 4px;
+    margin-bottom: 2px;
   }
 
   .stack {
-    margin-top: 6px;
-    font-size: 9pt;
+    margin-top: 4px;
+    font-size: 8.5pt;
   }
 }
