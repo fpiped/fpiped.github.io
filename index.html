@@ -14,75 +14,97 @@
     <meta property="og:image:alt" content="Filippo Scotti - Data / Analytics Engineer">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://fpiped.github.io/og.png">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#f5f5f5">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main class="page">
-      <header class="hero">
-        <div>
+    <header class="site-header">
+      <a class="name" href="#top">Filippo Scotti</a>
+      <nav aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="cv/">CV</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-main">
           <p class="eyebrow">Data / Analytics Engineer</p>
-          <h1>Filippo Scotti</h1>
-          <p class="location">Milan, Italy</p>
-        </div>
-        <nav class="links" aria-label="Professional links">
-          <a href="cv/">CV</a>
-          <a href="https://www.linkedin.com/in/filippo-scotti">linkedin.com/in/filippo-scotti</a>
-          <a href="https://github.com/fpiped">github.com/fpiped</a>
-        </nav>
-      </header>
-
-      <section class="section" aria-labelledby="about">
-        <h2 id="about">About</h2>
-        <p class="summary">
-          Data and Analytics Engineer with 5+ years of experience building
-          analytical data products, cloud data platforms, and reliable ingestion
-          pipelines. I work across data integration, transformation, and
-          modeling, turning complex operational data into consistent, usable
-          datasets.
-        </p>
-      </section>
-
-      <section class="section" aria-labelledby="current-work">
-        <h2 id="current-work">Current work</h2>
-        <article class="entry">
-          <header class="entry-header">
-            <div>
-              <h3>Data Engineer</h3>
-              <p>Compri AI</p>
-            </div>
-            <time>2025 - Present</time>
-          </header>
-          <p>
-            Building an AWS data platform that integrates heterogeneous
-            procurement and ERP data, contributing to common data modeling and
-            modular transformations with dbt Core.
+          <h1 id="hero-title">Building useful data systems.</h1>
+          <p class="intro">
+            I turn complex operational data into reliable platforms, clear
+            models, and analytical products that people can trust.
           </p>
-          <p class="stack"><strong>stack</strong> Python, SQL, dbt Core, AWS, Airflow</p>
-        </article>
+          <div class="primary-links">
+            <a class="button" href="cv/">View full CV</a>
+            <a href="https://www.linkedin.com/in/filippo-scotti">LinkedIn ↗</a>
+            <a href="https://github.com/fpiped">GitHub ↗</a>
+          </div>
+        </div>
+        <aside class="profile-note">
+          <p class="label">Based in</p>
+          <p>Milan, Italy</p>
+          <p class="label">Focus</p>
+          <p>Integration · Transformation · Modeling · Quality · Analytics</p>
+          <p class="label">Core stack</p>
+          <p>Python · SQL · dbt Core · AWS · Airflow</p>
+        </aside>
       </section>
 
-      <section class="section" aria-labelledby="selected-work">
-        <h2 id="selected-work">Selected work</h2>
-        <article class="entry">
-          <header class="entry-header">
-            <div>
-              <h3>Strategia Pensione Italia</h3>
-              <p>Independent analytical product</p>
-            </div>
-            <a href="https://strategiapensione.it/">strategiapensione.it</a>
-          </header>
+      <section class="work section" id="work" aria-labelledby="work-title">
+        <header class="section-title">
+          <p>01</p>
+          <h2 id="work-title">Selected work</h2>
+        </header>
+        <article class="project">
+          <div>
+            <p class="label">Independent analytical product</p>
+            <h3>Strategia Pensione Italia</h3>
+          </div>
           <p>
             A transparent simulator for comparing Italian supplementary pension
             strategies, built around explicit assumptions, tested calculations,
             and a documented methodology.
           </p>
+          <a href="https://strategiapensione.it/">Visit project ↗</a>
         </article>
       </section>
 
-      <footer>
-        <p>Full experience, education, and certifications are available in the <a href="cv/">complete CV</a>.</p>
-      </footer>
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <header class="section-title">
+          <p>02</p>
+          <h2 id="experience-title">Experience</h2>
+        </header>
+        <div class="experience-list">
+          <article>
+            <time>2025 — Present</time>
+            <div><h3>Compri AI</h3><p>Data Engineer</p></div>
+            <p>AWS data platform, heterogeneous source integration, common data modeling, and dbt Core transformations.</p>
+          </article>
+          <article>
+            <time>2023 — 2025</time>
+            <div><h3>illimity / Altermaind</h3><p>Data Engineer</p></div>
+            <p>Lakehouse components, operational and analytical modeling, ETL, and CDC.</p>
+          </article>
+          <article>
+            <time>2022 — 2023</time>
+            <div><h3>NTT DATA</h3><p>Data Engineer</p></div>
+            <p>Large-scale batch and streaming ingestion for complex legacy data.</p>
+          </article>
+          <article>
+            <time>2020 — 2022</time>
+            <div><h3>GroupM</h3><p>Data Analyst</p></div>
+            <p>Automated analytical models and reporting across five advertising platforms.</p>
+          </article>
+        </div>
+        <a class="cv-link" href="cv/">Full experience, education, and certifications →</a>
+      </section>
     </main>
+
+    <footer>
+      <p>Filippo Scotti · Data / Analytics Engineer</p>
+      <p><a href="https://www.linkedin.com/in/filippo-scotti">LinkedIn</a> · <a href="https://github.com/fpiped">GitHub</a></p>
+    </footer>
   </body>
 </html>
