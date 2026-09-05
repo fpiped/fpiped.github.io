@@ -1,7 +1,7 @@
 # Filippo Scotti — personal website and CV
 
-Versioned personal website with the full HTML CV at `/cv/` and a private-contact
-PDF export workflow.
+Versioned personal website with the full HTML CV at `/cv/` and a downloadable
+PDF containing direct contact details.
 
 Live site: <https://fpiped.github.io/>
 
@@ -43,18 +43,23 @@ not installed in a standard location, set `BROWSER`:
 BROWSER="/path/to/browser" ./scripts/build-pdf.sh
 ```
 
-Generated PDFs are written to `output/` and are not committed.
+The default local PDF is written to `output/` and is not committed. To refresh
+the public download after editing the CV, run:
+
+```bash
+./scripts/build-pdf.sh cv/filippo-scotti-cv.pdf
+```
 
 ## Publishing
 
 GitHub Pages serves the static site directly from the root of the `main` branch.
-The presentation homepage lives at `/`; the complete CV lives at `/cv/`. The
-empty `.nojekyll` file disables Jekyll processing.
+The presentation homepage lives at `/`; the HTML CV lives at `/cv/`; and the
+homepage downloads `/cv/filippo-scotti-cv.pdf`. The empty `.nojekyll` file
+disables Jekyll processing.
 
 ## Privacy
 
-The public site intentionally contains no direct email. The general location is
-public, and professional contact is available through the linked LinkedIn
-profile. The PDF builder injects the email from the Git-ignored
-`.cv-contact.json` into a temporary HTML file; the email never enters the tracked
-GitHub Pages source.
+The public HTML intentionally contains no direct email. The general location is
+public. The downloadable PDF intentionally includes the email injected from the
+Git-ignored `.cv-contact.json`; therefore the address is public only inside the
+downloadable document, not in the rendered or indexed HTML.
