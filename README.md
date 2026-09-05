@@ -1,12 +1,14 @@
-# Filippo Scotti CV
+# Filippo Scotti — personal website and CV
 
-Versioned HTML CV with a printable stylesheet and a small PDF export script.
+Versioned personal website with the full HTML CV at `/cv/` and a private-contact
+PDF export workflow.
 
 Live site: <https://fpiped.github.io/>
 
 ## Edit
 
-Update the content in `index.html` and the visual rules in `styles.css`.
+Update the homepage in `index.html` and `styles.css`. The canonical CV source is
+`cv/index.html`, with print and screen rules in `cv/styles.css`.
 
 ## Preview
 
@@ -45,8 +47,9 @@ Generated PDFs are written to `output/` and are not committed.
 
 ## Publishing
 
-GitHub Pages serves the static site directly from the root of the `main`
-branch. The empty `.nojekyll` file disables Jekyll processing.
+GitHub Pages serves the static site directly from the root of the `main` branch.
+The presentation homepage lives at `/`; the complete CV lives at `/cv/`. The
+empty `.nojekyll` file disables Jekyll processing.
 
 ## Privacy
 

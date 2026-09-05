@@ -72,9 +72,9 @@ mkdir -p "$ROOT_DIR/tmp"
 TMP_DIR="$(mktemp -d "$ROOT_DIR/tmp/pdf-build.XXXXXX")"
 trap 'rm -rf "$TMP_DIR"' EXIT
 
-cp "$ROOT_DIR/styles.css" "$TMP_DIR/styles.css"
+cp "$ROOT_DIR/cv/styles.css" "$TMP_DIR/styles.css"
 
-python3 - "$ROOT_DIR/index.html" "$CONTACT_FILE" "$TMP_DIR/index.html" <<'PY'
+python3 - "$ROOT_DIR/cv/index.html" "$CONTACT_FILE" "$TMP_DIR/index.html" <<'PY'
 import html
 import json
 import sys
